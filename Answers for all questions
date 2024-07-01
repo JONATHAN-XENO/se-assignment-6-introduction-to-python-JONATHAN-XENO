@@ -1,0 +1,141 @@
+Question 1
+Python is a high-level, interpreted programming language known for its simplicity, versatility, and readability. It emphasizes code readability and allows programmers to express concepts in fewer lines of code compared to other languages, making it particularly suitable for rapid development and prototyping. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming, offering flexibility in coding styles. Its extensive standard library provides ready-to-use modules and functions for various tasks, ranging from web development and data analysis to machine learning and scientific computing, contributing to its widespread adoption across different domains.
+Key features that contribute to Python's popularity include dynamic typing and automatic memory management, which simplify development by eliminating the need for explicit variable declarations and manual memory management. Python's interpreted nature enables interactive and exploratory programming, where code can be executed line by line, facilitating rapid testing and debugging.
+Question 2
+Download Python: Go to the official Python website, download the latest version of Python for Windows, and run the installer.
+Add to PATH: During installation, check the option "Add Python to PATH" to make Python executable globally accessible.
+Verify Installation: Open Command Prompt and type python --version to verify Python installation.
+Question 3
+#Python line of code that prints the statement Hello World
+print("Hello, World!")
+The above code demonstrates basic syntax elements: print() is a function that outputs text to the console, "Hello, World!" is a string literal enclosed in double quotes, and # introduces comments. Python uses indentation for code blocks, and statements typically end with a newline.
+Question 4
+The basic data types include:
+•	Integer (int): Represents whole numbers without decimals, such as 10, -5, or 0.
+•	Float (float): Represents numbers with decimals, like 3.14, 2.718, or -1.0.
+•	String (str): Represents sequences of characters enclosed in quotes, such as "Hello", 'Python', or "123".
+•	Boolean (bool): Represents truth values True or False, used for logical operations and conditions.
+•	List: Represents an ordered collection of items, enclosed in square brackets [], allowing for mutable sequences like [1, 2, 3].
+•	Tuple: Similar to lists but immutable, enclosed in parentheses (), such as (1, 2, 3).
+•	Dictionary (dict): Represents key-value pairs enclosed in curly braces {}, allowing for efficient lookup and retrieval like {'name': 'Alice', 'age': 30}.
+Here is a sample script:
+# Variables of different data types
+num1 = 10  # integer
+num2 = 3.14  # float
+message = "Hello, Python!"  # string
+is_python_fun = True  # boolean
+
+# List and dictionary
+my_list = [1, 2, 3, 4]  # list
+my_dict = {'name': 'Alice', 'age': 30}  # dictionary
+
+# Printing variables
+print(num1)
+print(num2)
+print(message)
+print(is_python_fun)
+print(my_list)
+print(my_dict)
+Question 5
+Conditional statements and loops are fundamental control structures in Python for executing code based on conditions and iterating through sequences of data. Conditional statements, such as if, else, and elif (short for "else if"), allow Python programs to make decisions based on conditions. For example:
+x = 10
+if x > 0:
+    print("Positive number")
+else:
+    print("Non-positive number")
+if x is greater than 0, the program prints "Positive number". Otherwise, it prints "Non-positive number".
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+The for loop iterates through each item (fruit) in the fruits list and prints each item (apple, banana, cherry) on a new line.
+
+Question 6
+Functions in Python are reusable blocks of code that perform a specific task. They are defined using the def keyword followed by a function name, parameters enclosed in parentheses, and a colon. Functions are useful for organizing code into modular units, improving code readability, and reducing redundancy by allowing the same functionality to be executed multiple times with different inputs.
+Here is a sample of a function and how to call it:
+def sum_two_numbers(a, b):
+    return a + b
+    result = sum_two_numbers(3, 5)
+print(result) 
+
+Question 7
+Lists (list) are ordered collections of items where each item is indexed by position. They are mutable, meaning you can change their content after creation, and allow duplicate values. Lists are typically used to store sequences of related items that need to be accessed in order or manipulated as a whole. On the other hand, dictionaries (dict) are unordered collections of key-value pairs. They are mutable, allowing the addition, modification, and deletion of key-value pairs. Dictionaries are optimized for fast lookups and retrieval of values based on keys rather than positions. They are often used to represent mappings where each key uniquely identifies a value, providing efficient data organization and access patterns.
+# Create a list of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Create a dictionary with key-value pairs
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# Print initial list and dictionary
+print("Initial list:", numbers)
+print("Initial dictionary:", person)
+
+# Accessing elements
+print("First number in list:", numbers[0])
+print("Age of the person:", person["age"])
+
+# Modifying elements
+numbers[0] = 10
+person["city"] = "San Francisco"
+print("Modified list:", numbers)
+print("Modified dictionary:", person)
+
+# Adding elements
+numbers.append(6)
+person["gender"] = "Female"
+print("List after adding element:", numbers)
+print("Dictionary after adding key-value pair:", person)
+
+# Removing elements
+numbers.remove(3)  # Remove specific element from list
+del person["age"]  # Delete key-value pair from dictionary
+print("List after removing element:", numbers)
+print("Dictionary after deleting key-value pair:", person)
+
+Question 8
+Exception handling in Python allows programmers to manage and respond to unexpected errors or exceptions that may occur during program execution. By using try, except, and optionally finally blocks, Python programs can gracefully handle exceptions and prevent abrupt termination. The try block contains the code that may raise an exception, while the except block catches and handles specific exceptions or a general Exception type. The finally block, if included, executes cleanup code regardless of whether an exception occurred or not.
+Here is an example of a script:
+try:
+    x = 10 / 0  # This operation will raise a ZeroDivisionError
+    print("Division result:", x)  # This line won't execute due to the exception
+except ZeroDivisionError:
+    print("Error: Division by zero!")
+finally:
+    print("Cleanup: This code always runs, regardless of exceptions.")
+Question  9
+modules are files containing Python definitions and statements, such as functions, classes, and variables. They allow you to organize code into reusable units, making it easier to manage and maintain large programs. Modules are imported into scripts using the import statement, enabling access to their functionalities. For example, the math module provides mathematical functions and constants like sqrt() for square roots and pi for the mathematical constant pi. Modules help avoid naming conflicts and improve code organization by encapsulating related functionalities within separate files.
+Packages in Python are collections of modules grouped together in directories with a special __init__.py file. They allow for a hierarchical organization of modules and facilitate the creation of larger programs by organizing related modules into a single namespace. Packages are imported similarly to modules using the import statement, with dot notation to access modules within packages. For instance, the package numpy contains modules for numerical computing, and importing specific modules from numpy like numpy.random provides access to random number generation functionalities.
+Question 10:
+Here is a script that reads content in a file:
+# Define the file path
+file_path = "example.txt"
+# Open the file in read mode
+with open(file_path, 'r') as file:
+ # Read the entire content of the file
+  content = file.read()
+  # Print the content to the console
+    print(content)
+Here is a script to write content in a file:
+# Define the file path
+file_path = "output.txt"
+
+# Define a list of strings
+data = ["Hello", "World!", "This", "is", "Python."]
+
+# Open the file in write mode
+with open(file_path, 'w') as file:
+    # Write each string in the list to the file¬
+    for line in data:
+        file.write(line + "\n")
+References:
+•  Python Official Documentation: Provides comprehensive information on Python programming language features, syntax, and modules. Available at Python.org.
+•  Real Python: Offers tutorials, articles, and resources for Python developers at various skill levels. Accessible at Real Python.
+•  GeeksforGeeks Python Programming Language: Provides tutorials, examples, and explanations of Python concepts and features. Visit GeeksforGeeks Python.
+•  W3Schools Python Tutorial: Provides interactive tutorials and examples for learning Python programming. Explore at W3Schools Python.
+•  Python Crash Course by Eric Matthes: A book that provides a hands-on introduction to Python programming. Available at Python Crash Course.
+•  Automate the Boring Stuff with Python by Al Sweigart: A book that teaches Python programming for practical, real-world tasks. More details at Automate the Boring Stuff with Python.
+
+
